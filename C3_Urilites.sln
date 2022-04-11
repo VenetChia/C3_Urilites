@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.32228.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C3_Urilites", "C3_Urilites\C3_Urilites.csproj", "{6756E5A3-62F3-4314-861F-FF3FDFA8B8B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLibrary", "MyLibrary\MyLibrary.csproj", "{DC0E5E61-B2D2-44BD-BDB8-8174A703C1F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6756E5A3-62F3-4314-861F-FF3FDFA8B8B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6756E5A3-62F3-4314-861F-FF3FDFA8B8B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6756E5A3-62F3-4314-861F-FF3FDFA8B8B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC0E5E61-B2D2-44BD-BDB8-8174A703C1F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC0E5E61-B2D2-44BD-BDB8-8174A703C1F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC0E5E61-B2D2-44BD-BDB8-8174A703C1F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC0E5E61-B2D2-44BD-BDB8-8174A703C1F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

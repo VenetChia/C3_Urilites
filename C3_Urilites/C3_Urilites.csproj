@@ -11,6 +11,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MyLibrary\MyLibrary.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="icons8-божья-коровка-48.png" />
   </ItemGroup>
 
