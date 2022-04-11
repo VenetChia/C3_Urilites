@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="C3_Urilites.TabSwitcher"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:C3_Urilites"
+             mc:Ignorable="d">
+    <StackPanel Orientation="Horizontal">
+        <Button Content="Prev" x:Name="btPrev" Width="100" Height="20" Margin="3" Click="btPrev_Click"/>
+        <Button Content="Next" x:Name="btNext" Width="100" Height="20" Margin="3" Click="btNext_Click"/>
+    </StackPanel>
+</UserControl>

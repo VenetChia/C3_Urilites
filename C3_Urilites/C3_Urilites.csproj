@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="icons8-божья-коровка-48.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="icons8-божья-коровка-48.png" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C3_Urilites", "C3_Urilites\C3_Urilites.csproj", "{6756E5A3-62F3-4314-861F-FF3FDFA8B8B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyControlsLibrary", "MyControlsLibrary\MyControlsLibrary.csproj", "{2F16F4B9-05C2-4440-A86F-31912FD39C42}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6756E5A3-62F3-4314-861F-FF3FDFA8B8B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6756E5A3-62F3-4314-861F-FF3FDFA8B8B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6756E5A3-62F3-4314-861F-FF3FDFA8B8B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6756E5A3-62F3-4314-861F-FF3FDFA8B8B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F16F4B9-05C2-4440-A86F-31912FD39C42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F16F4B9-05C2-4440-A86F-31912FD39C42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F16F4B9-05C2-4440-A86F-31912FD39C42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F16F4B9-05C2-4440-A86F-31912FD39C42}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {536C8362-A21A-49CA-80A1-2B2F5C0008D8}
+	EndGlobalSection
+EndGlobal
