@@ -24,11 +24,13 @@ namespace C3_Urilites
         string senderE = null;
         string recipient = null;
         string password =   null;
+        public string textPrev { get; set; } = "Back";
         //List<service_client> serviceClient = new List<service_client>();
         public MainWindow()
         {
             InitializeComponent();
             //serviceClient.Add(new service_client() { serviceClient = "", portClient = "25" });
+            this.DataContext = this;
         }
 
         private void miAbout_Click(object sender, RoutedEventArgs e)

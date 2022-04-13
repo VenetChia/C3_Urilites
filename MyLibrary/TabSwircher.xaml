@@ -4,9 +4,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MyLibrary"
-             mc:Ignorable="d">
+             mc:Ignorable="d" x:Name="tsControl">
     <StackPanel Orientation="Horizontal">
-        <Button Content="Prev" x:Name="btPrev" Width="100" Height="20" Margin="3" Click="btPrev_Click"/>
-        <Button Content="Next" x:Name="btNext" Width="100" Height="20" Margin="3" Click="btNext_Click"/>
+        <Button Content="{Binding ElementName=tsControl, Path=PrevText}" x:Name="btPrev" Width="100" Height="20" Margin="3" Click="btPrev_Click"/>
+        <Button Content="{Binding ElementName=tsControl, Path=NextText}" x:Name="btNext" Width="100" Height="20" Margin="3" Click="btNext_Click"/>
     </StackPanel>
 </UserControl>

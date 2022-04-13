@@ -3,9 +3,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:C3_Urilites"
+        xmlns:local="clr-namespace:C3_Urilites" xmlns:sys="clr-namespace:System;assembly=System.Runtime"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Icon="/icons8-божья-коровка-48.png">
+        Title="MainWindow" Height="450" Width="800" Icon="/icons8-божья-коровка-48.png" x:Name="mainWin">
+    <!--<Window.Resources>
+        <sys:String x:Key="textPrev">Back</sys:String>
+    </Window.Resources>-->
     <Grid>
         <!--<Grid.ColumnDefinitions>
             <ColumnDefinition Width="171*"/>
@@ -19,7 +22,9 @@
         </Grid.RowDefinitions>
         <StatusBar Grid.Row="1">
             <StatusBarItem>
-                <MyLibrary:TabSwircher PrevClick="btPrev_Click" NextClick="btNext_Click"/>
+                <MyLibrary:TabSwircher x:Name="tsMain" btPreviousClick="btPrev_Click" btNextEClick="btNext_Click"/>
+                <!--PrevText="{StaticResource textPrev}"-->
+                
             </StatusBarItem>
         </StatusBar>
         <Menu Grid.Row="0" Grid.ColumnSpan="2">
