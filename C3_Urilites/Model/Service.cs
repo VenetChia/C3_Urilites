@@ -39,5 +39,9 @@ namespace C3_Urilites.Model
             System.Diagnostics.Debug.WriteLine(messageSender);
             System.IO.File.AppendAllText("log.txt", messageSender);
         }
+        public static List<String> GetListTo()
+        {
+            return new List<string>() { "Adres1@mail.ru", "Adres2@mail.ru" };
+        }
     }
 }

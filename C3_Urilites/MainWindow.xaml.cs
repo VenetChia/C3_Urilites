@@ -21,6 +21,7 @@ namespace C3_Urilites
     /// </summary>
     public partial class MainWindow : Window
     {
+        //C3_Urilites.ViewsModels.MainViewModel viewModel = new ViewsModels.MainViewModel();
         string senderE = null;
         string recipient = null;
         string password =   null;
@@ -30,7 +31,8 @@ namespace C3_Urilites
         {
             InitializeComponent();
             //serviceClient.Add(new service_client() { serviceClient = "", portClient = "25" });
-            this.DataContext = this;
+            //this.DataContext = this;
+            //this.DataContext = viewModel;
         }
 
         private void miAbout_Click(object sender, RoutedEventArgs e)
@@ -39,19 +41,19 @@ namespace C3_Urilites
             about.ShowDialog();
         }
 
-        private void btSend_Click(object sender, RoutedEventArgs e)
-        {
-            ChooseAdress();
-            if (password !="" && senderE != "" && recipient != "")
-            {
-                Model.Service.SendMail(sender.ToString(), recipient.ToString(), password.ToString());
-            }
-            else
-            {
-                MessageBox.Show("Введите почтовые адреса отправителя, получателя и пароль от почтового ящика отправителя");
-            }
-            //Model.Service.SendMail("venetchia@mail.ru", "cat6@list.ru", "password");
-        }
+        //private void btSend_Click(object sender, RoutedEventArgs e)
+        //{
+        //    ChooseAdress();
+        //    if (password !="" && senderE != "" && recipient != "")
+        //    {
+        //        Model.Service.SendMail(sender.ToString(), recipient.ToString(), password.ToString());
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Введите почтовые адреса отправителя, получателя и пароль от почтового ящика отправителя");
+        //    }
+        //    //Model.Service.SendMail("venetchia@mail.ru", "cat6@list.ru", "password");
+        //}
 
         private void miExit_Click(object sender, RoutedEventArgs e)
         {
@@ -66,7 +68,7 @@ namespace C3_Urilites
 
         private void cbRecipient_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            tbFrom.Text = ((sender as ComboBox).SelectedItem as ComboBoxItem).Content.ToString();
+            //tbFrom.Text = ((sender as ComboBox).SelectedItem as ComboBoxItem).Content.ToString();
         }
 
         private void btPrev_Click(object sender, RoutedEventArgs e)
