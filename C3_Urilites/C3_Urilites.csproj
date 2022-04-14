@@ -18,4 +18,10 @@
     <Resource Include="icons8-божья-коровка-48.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\" />
+    <Folder Include="ViewsModels\" />
+    <Folder Include="Commands\" />
+  </ItemGroup>
+
 </Project>
