@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:vm="clr-namespace:C3_Urilites.ViewsModels"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:C3_Urilites" xmlns:sys="clr-namespace:System;assembly=System.Runtime"
         mc:Ignorable="d"
@@ -10,6 +11,9 @@
     <Window.DataContext>
         <vm:MainViewModel/>
     </Window.DataContext>
+    <Window.InputBindings>
+        <KeyBinding Key="Q" Modifiers="Control" Command="{Binding CloseWindowCommand}"/>
+    </Window.InputBindings>
     <!--<Window.Resources>
         <sys:String x:Key="textPrev">Back</sys:String>
     </Window.Resources>-->
@@ -49,20 +53,21 @@
                         <ColumnDefinition Width="50*"/>
                     </Grid.ColumnDefinitions>
 
-                    <ComboBox Name="cbRecipient" ItemsSource="{Binding AdressTo}" HorizontalAlignment="Left" Margin="23,20,0,0" VerticalAlignment="Top" Width="320" Grid.Column="1" SelectionChanged="cbRecipient_SelectionChanged" />
-                    <RichTextBox x:Name="rtbBody" HorizontalAlignment="Left" Height="96" Margin="23,120,0,0" VerticalAlignment="Top" Width="308" Grid.Column="1">
+                    <ComboBox Name="cbRecipient" ItemsSource="{Binding Adress}" Text="{Binding From, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" IsEditable="True" HorizontalAlignment="Left" Margin="23,20,0,0" VerticalAlignment="Top" Width="320" Grid.Column="1"/>
+                    <ComboBox Name="cbSender" ItemsSource="{Binding Adress}" Text="{Binding To, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" IsEditable="True" HorizontalAlignment="Left" Margin="23,95,0,0" VerticalAlignment="Top" Width="320" Grid.Column="1"/>
+                    <RichTextBox x:Name="rtbBody" HorizontalAlignment="Left" Height="60" Margin="23,170,0,0" VerticalAlignment="Top" Width="308" Grid.Column="1">
                         <FlowDocument>
                             <Paragraph>
                                 <Run Text="Test"/>
                             </Paragraph>
                         </FlowDocument>
                     </RichTextBox>
-                    <Label HorizontalAlignment="Left" Height="25" Margin="10,60,0,0" VerticalAlignment="Top" Content="From" Grid.Column="0"/>
-                    <Label HorizontalAlignment="Left" Height="25" Margin="10,60,0,0" VerticalAlignment="Top" Content="Password" Grid.Column="2"/>
+                    <Label HorizontalAlignment="Left" Height="25" Margin="10,20,0,0" VerticalAlignment="Top" Content="From" Grid.Column="0"/>
+                    <Label HorizontalAlignment="Left" Height="25" Margin="10,90,0,0" VerticalAlignment="Top" Content="Password" Grid.Column="2"/>
                     <Label HorizontalAlignment="Left" Height="25" Margin="10,90,0,0" VerticalAlignment="Top" Content="To" Grid.Column="0"/>
                     <TextBox x:Name="tbFrom" HorizontalAlignment="Left" Height="20" Margin="23,60,0,0" VerticalAlignment="Top" Width="308" Grid.Column="1"/>
-                    <TextBox x:Name="tbTo" HorizontalAlignment="Left" Height="20" Margin="23,90,0,0" VerticalAlignment="Top" Width="308" Grid.Column="1"/>
-                    <TextBox x:Name="tbPassword" HorizontalAlignment="Left" Height="20" Margin="23,60,0,0" VerticalAlignment="Top" Width="250" Grid.Column="3"/>
+                    <TextBox x:Name="tbTo" HorizontalAlignment="Left" Height="20" Margin="23,130,0,0" VerticalAlignment="Top" Width="308" Grid.Column="1"/>
+                    <TextBox x:Name="tbPassword" Text="{Binding Password, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Left" Height="20" Margin="23,95,0,0" VerticalAlignment="Top" Width="250" Grid.Column="3"/>
                     <Button Content="Send" Command="{Binding SendMailClick}" x:Name="btSend" HorizontalAlignment="Left" Margin="23,250,0,0" VerticalAlignment="Top" Width="301" Height="19" Grid.Column="1"/>
                 </Grid>
             </TabItem>
@@ -70,4 +75,13 @@
             <TabItem Header="Page 3"/>
         </TabControl>
     </Grid>
+
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Closing">
+            <i:InvokeCommandAction Command="{Binding ClosingCommand}" PassEventArgsToCommand="True"/>
+        </i:EventTrigger>
+        <i:EventTrigger>
+            <i:InvokeCommandAction Command="{Binding ClosedCommand}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
 </Window>

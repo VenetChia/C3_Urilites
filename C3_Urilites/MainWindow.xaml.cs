@@ -80,5 +80,10 @@ namespace C3_Urilites
         {
             tcControl.SelectedIndex = (tcControl.SelectedIndex + 1) % tcControl.Items.Count;
         }
+
+        private void cbSender_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

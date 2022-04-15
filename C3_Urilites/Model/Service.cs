@@ -13,6 +13,7 @@ namespace C3_Urilites.Model
     {
         public static void SendMail(string sender, string recipient, string password)
         {
+            Log($"From {sender}, To {recipient}, Pass {password}");
             MailAddress from = new MailAddress(sender);
             MailAddress to = new MailAddress(recipient);
             MailMessage mailMessage = new MailMessage(from, to);
