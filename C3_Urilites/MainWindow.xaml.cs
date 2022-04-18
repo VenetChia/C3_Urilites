@@ -85,5 +85,15 @@ namespace C3_Urilites
         {
 
         }
+
+        private void TextBox_Error(object sender, ValidationErrorEventArgs e)
+        {
+            Service.Log("Error");
+            if (e.Action == ValidationErrorEventAction.Added)
+            {
+                ((Control)sender).ToolTip = e.Error.ErrorContent.ToString();
+            }
+            else { ((Control)sender).ToolTip = null; }
+        }
     }
 }
