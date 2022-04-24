@@ -20,19 +20,25 @@ namespace WPFHomeTask
     /// </summary>
     public partial class MainWindow : Window
     {
+        ThreadTaskSum threadTaskSum;
+        ThreadTaskFuct threadTaskFuct;
+
         public MainWindow()
         {
             InitializeComponent();
+            threadTaskSum = new ThreadTaskSum("SumAll", int.Parse(tbNum.Text));
+            threadTaskFuct = new ThreadTaskFuct("Fuct", int.Parse(tbNum.Text));
+
         }
 
         private void btStart1_Click(object sender, RoutedEventArgs e)
         {
-
+            if(threadTaskSum != null) threadTaskSum.thread.Start();
         }
 
         private void btPause1_Click(object sender, RoutedEventArgs e)
         {
-
+            if (threadTaskSum != null) threadTaskSum.thread.Suspend();
         }
 
         private void btStop1_Click(object sender, RoutedEventArgs e)
