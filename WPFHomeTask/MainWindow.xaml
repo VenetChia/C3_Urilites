@@ -37,14 +37,14 @@
         <Label x:Name="lb1" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Content="Введите число" HorizontalAlignment="Center" />
 
         <TextBox Grid.Row="1" Grid.Column="5" x:Name="tbNum" Text="4"/>
-        <TextBox Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="5" x:Name="tbInfoRes1" Text="4"/>
+        <TextBox Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="10" x:Name="tbInfoRes1" Text="4" VerticalScrollBarVisibility="Visible"/>
 
         <Button Grid.Row="5" Grid.Column="1" x:Name="btStart1" Click="btStart1_Click">Start</Button>
         <Button Grid.Row="5" Grid.Column="3" x:Name="btPause1" Click="btPause1_Click">Pause</Button>
         <Button Grid.Row="5" Grid.Column="5" x:Name="btStop1" Click="btStop1_Click">Stop</Button>
 
-        <CheckBox Grid.Row="3" Grid.Column="1" x:Name="cbVar1" Content="Факториал" Click="cbVar1_Click" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
-        <CheckBox Grid.Row="3" Grid.Column="3" x:Name="cbVar2" Content="Сумма чисел" Click="cbVar2_Click" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+        <CheckBox Grid.Row="3" Grid.Column="1" x:Name="cbVar1" Content="Факториал" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+        <CheckBox Grid.Row="3" Grid.Column="3" x:Name="cbVar2" Content="Сумма чисел" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
 
     </Grid>
 </Window>

@@ -7,7 +7,7 @@ using WPFHomeTask;
 
 namespace WPFHomeTask
 {
-    delegate void DisplayMessage(string message);
+    public delegate void DisplayMessage(string message);
     public class Delegate
     {
         public static void MessageDelegate()
