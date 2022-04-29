@@ -17,7 +17,10 @@ namespace WPFHomeTask
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
+    ///
     /// </summary>
+    /// Добавить чтение файла и подсчет чисел 
+
     public partial class MainWindow : Window
     {
         ThreadTaskSum threadTaskSum;
