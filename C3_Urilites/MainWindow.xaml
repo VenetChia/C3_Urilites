@@ -99,7 +99,7 @@
                     <Button Content="Send" Command="{Binding SendMailClick}" x:Name="btSend" HorizontalAlignment="Left" Margin="23,250,0,0" VerticalAlignment="Top" Width="301" Height="19" Grid.Column="1"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Page 2">
+            <TabItem Header="Validation">
                 <StackPanel>
                     <TextBox Height="300" Validation.Error="TextBox_Error">
                         <TextBox.Text>
@@ -112,7 +112,43 @@
                     </TextBox>
                 </StackPanel>
             </TabItem>
-            <TabItem Header="Page 3"/>
+            <TabItem Header="Adresses">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition />
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0" Margin="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="70"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Content="Adress"/>
+                        <TextBox Grid.Column="1" x:Name="tbAdressName" VerticalContentAlignment="Center"/>
+                        <Button Grid.Column="4"  Margin="5 0 5 0" Name="AddButton" Content="Добавить" Command="{Binding AddAdressCommand}" CommandParameter="{Binding ElementName=tbAdressName,Path=Text }"/>
+                    </Grid>
+                    <DataGrid x:Name="dgGrid" ItemsSource="{Binding Adresses}" Grid.Row="1" Margin="5" AutoGenerateColumns="False" IsReadOnly="True">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Width="30" Binding="{Binding AdressID}"/>
+                            <DataGridTextColumn Header="Adress" Width="10*" Binding="{Binding AdressText}" />
+                            <DataGridTemplateColumn Header="Delete" Width="1*">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="Del" Command="{Binding Path=DataContext.RemoveAdressCommand,RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type DataGrid}}}" CommandParameter="{Binding ElementName=dgGrid,Path=SelectedItem}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <StatusBar Grid.Row="2">
+                        <TextBlock x:Name="tbStatus"/>
+                    </StatusBar>
+                </Grid>
+            </TabItem>
         </TabControl>
     </Grid>
 
