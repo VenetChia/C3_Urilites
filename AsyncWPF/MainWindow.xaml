@@ -1,0 +1,16 @@
+﻿<Window x:Class="AsyncWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AsyncWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="250" Width="500">
+    <StackPanel>
+        <Button x:Name="btnButton" Click="btnButton_Click" ToolTip="Работа асинхронного метода" >Call method 1</Button>
+        <Button x:Name="btnButton2" Click="btnButton_Click2" ToolTip="Разделение на два метода с выводом в консоль">Call method 2</Button>
+        
+        <TextBox x:Name="tbText" Background="AliceBlue">You can type there</TextBox>
+
+    </StackPanel>
+</Window>

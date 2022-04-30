@@ -27,23 +27,27 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdressesDataBase", "Adresse
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task", "Task", "{1783D730-460F-4CB5-8050-50D34226166A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CATask", "CATask\CATask.csproj", "{9E0F2DEE-D1E5-4789-8331-280E525DF34C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CATask", "CATask\CATask.csproj", "{9E0F2DEE-D1E5-4789-8331-280E525DF34C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskFactory", "TaskFactory\TaskFactory.csproj", "{F1248B69-304A-4688-A0E6-0F245942F20B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskFactory", "TaskFactory\TaskFactory.csproj", "{F1248B69-304A-4688-A0E6-0F245942F20B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task_ContinueWith", "Task_ContinueWith\Task_ContinueWith.csproj", "{4DA36A55-891A-4FD8-980C-EC6D9EB9DF24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task_ContinueWith", "Task_ContinueWith\Task_ContinueWith.csproj", "{4DA36A55-891A-4FD8-980C-EC6D9EB9DF24}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task_returnValue", "Task_returnValue\Task_returnValue.csproj", "{63670C51-1532-4D2C-89A4-434B91C30A9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task_returnValue", "Task_returnValue\Task_returnValue.csproj", "{63670C51-1532-4D2C-89A4-434B91C30A9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task_Cancellation", "Task_Cancellation\Task_Cancellation.csproj", "{A2114AA5-BF89-4DF8-8CA0-404767EBE857}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task_Cancellation", "Task_Cancellation\Task_Cancellation.csproj", "{A2114AA5-BF89-4DF8-8CA0-404767EBE857}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task_Argument", "Task_Argument\Task_Argument.csproj", "{C89EBD0A-CFD9-4EB0-85DF-6C480523AF00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task_Argument", "Task_Argument\Task_Argument.csproj", "{C89EBD0A-CFD9-4EB0-85DF-6C480523AF00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParallelFor", "ParallelFor\ParallelFor.csproj", "{07D82837-2B9C-489D-966B-E5DFE43EFAA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParallelFor", "ParallelFor\ParallelFor.csproj", "{07D82837-2B9C-489D-966B-E5DFE43EFAA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PLINQ", "PLINQ\PLINQ.csproj", "{F8EC2131-50F7-442F-9A42-42A40E3B0A41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PLINQ", "PLINQ\PLINQ.csproj", "{F8EC2131-50F7-442F-9A42-42A40E3B0A41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "paralelInvoke", "paralelInvoke\paralelInvoke.csproj", "{DC2432E1-8B6C-4094-8AD2-11B84CC30AE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "paralelInvoke", "paralelInvoke\paralelInvoke.csproj", "{DC2432E1-8B6C-4094-8AD2-11B84CC30AE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParallelForEach", "ParallelForEach\ParallelForEach.csproj", "{A07DCBF4-4509-4B1A-BA58-1794B52E5810}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncWPF", "AsyncWPF\AsyncWPF.csproj", "{4B876CAF-9EA5-4D87-929A-752573B42A49}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -127,6 +131,14 @@ Global
 		{DC2432E1-8B6C-4094-8AD2-11B84CC30AE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC2432E1-8B6C-4094-8AD2-11B84CC30AE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC2432E1-8B6C-4094-8AD2-11B84CC30AE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A07DCBF4-4509-4B1A-BA58-1794B52E5810}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A07DCBF4-4509-4B1A-BA58-1794B52E5810}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A07DCBF4-4509-4B1A-BA58-1794B52E5810}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A07DCBF4-4509-4B1A-BA58-1794B52E5810}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B876CAF-9EA5-4D87-929A-752573B42A49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B876CAF-9EA5-4D87-929A-752573B42A49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B876CAF-9EA5-4D87-929A-752573B42A49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B876CAF-9EA5-4D87-929A-752573B42A49}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -146,6 +158,8 @@ Global
 		{07D82837-2B9C-489D-966B-E5DFE43EFAA3} = {1783D730-460F-4CB5-8050-50D34226166A}
 		{F8EC2131-50F7-442F-9A42-42A40E3B0A41} = {1783D730-460F-4CB5-8050-50D34226166A}
 		{DC2432E1-8B6C-4094-8AD2-11B84CC30AE2} = {1783D730-460F-4CB5-8050-50D34226166A}
+		{A07DCBF4-4509-4B1A-BA58-1794B52E5810} = {1783D730-460F-4CB5-8050-50D34226166A}
+		{4B876CAF-9EA5-4D87-929A-752573B42A49} = {1783D730-460F-4CB5-8050-50D34226166A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {536C8362-A21A-49CA-80A1-2B2F5C0008D8}
