@@ -10,18 +10,27 @@ using System.Windows;
 using C3_Urilites;
 using C3_Urilites.Commands.Base;
 using System.ComponentModel;
+using AdressDataBase;
+using System.Data.Entity;
+using System.Collections.ObjectModel;
 
 namespace C3_Urilites.ViewsModels
 {
     class MainViewModel: IDataErrorInfo
     {
         private string to = "Recipient";
+        private AdressDataBase.UtilitesDB _dbContainer;
 
         public MainViewModel()
         {
             ClosingCommand = new RelayCommand(OnClosingCommand, CanClosingCommandExecute);
+            AddAdressComand = new RelayCommand(OnAddAdressCommandExecute, CanAddAdressCommandExecute);
+            RemoveAdressCommand = new RelayCommand(OnRemoveAdressCommandExecute, CanRemoveAdressExecute);
+            _dbContainer = new AdressDataBase.UtilitesDB();
+            _dbContainer.Adresses.Load();
         }
-        public List<string> Adress { get; set; } = Model.Service.GetListTo();
+        //public List<string> Adress { get; set; } = Model.Service.GetListTo();
+        public ObservableCollection<Adress> Adresses => _dbContainer.Adresses.Local;
         public string From { get; set; } = "Sender";
         public string To 
         { get => to; 
@@ -107,6 +116,27 @@ namespace C3_Urilites.ViewsModels
         private bool CanClosingCommandExecute(object o) => true;
         #endregion
 
+        #region Adress Add
+        public ICommand AddAdressComand { get; }
+        private void OnAddAdressCommandExecute(object o)
+        {
+            _dbContainer.Adresses.Add(new Adress() { AdressText = o.ToString() });
+            _dbContainer.SaveChanges();
+        }
+        private bool CanAddAdressCommandExecute(object o) => true;
+        #endregion
+
+        #region Remove Adress
+        public ICommand RemoveAdressCommand { get; }
+        private void OnRemoveAdressCommandExecute(object o)
+        {
+            Adress adr = (o as Adress);
+            Adress adress = _dbContainer.Adresses.Where(a => a.AdressID == adr.AdressID).FirstOrDefault();
+            _dbContainer.Adresses.Remove(adress);
+            _dbContainer.SaveChanges();
+        }
+        private bool CanRemoveAdressExecute(object p) => true;
+        #endregion
         #endregion
     }
 }

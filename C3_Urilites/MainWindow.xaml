@@ -65,7 +65,7 @@
                         <ColumnDefinition Width="50*"/>
                     </Grid.ColumnDefinitions>
 
-                    <ComboBox Name="cbRecipient" ItemsSource="{Binding Adress}"  IsEditable="True" HorizontalAlignment="Left" Margin="23,20,0,0" VerticalAlignment="Top" Width="320" Grid.Column="1" Validation.ErrorTemplate="{StaticResource EmailTextErrorTemplate}">
+                    <ComboBox Name="cbRecipient" ItemsSource="{Binding Adresses}" DisplayMemberPath="AdressText"  IsEditable="True" HorizontalAlignment="Left" Margin="23,20,0,0" VerticalAlignment="Top" Width="320" Grid.Column="1" Validation.ErrorTemplate="{StaticResource EmailTextErrorTemplate}">
                         <ComboBox.Text>
                             <Binding Path="From" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                                 <Binding.ValidationRules>
@@ -74,7 +74,7 @@
                             </Binding>
                         </ComboBox.Text>
                     </ComboBox>
-                    <ComboBox Name="cbSender" ItemsSource="{Binding Adress}" IsEditable="True" HorizontalAlignment="Left" Margin="23,95,0,0" VerticalAlignment="Top" Width="320" Grid.Column="1" Validation.ErrorTemplate="{StaticResource EmailTextErrorTemplate}">
+                    <ComboBox Name="cbSender" ItemsSource="{Binding Adresses}" DisplayMemberPath="AdressText" IsEditable="True" HorizontalAlignment="Left" Margin="23,95,0,0" VerticalAlignment="Top" Width="320" Grid.Column="1" Validation.ErrorTemplate="{StaticResource EmailTextErrorTemplate}">
                         <ComboBox.Text>
                             <Binding Path="To" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                                 <Binding.ValidationRules>
@@ -129,7 +129,7 @@
                         </Grid.ColumnDefinitions>
                         <Label Grid.Column="0" Content="Adress"/>
                         <TextBox Grid.Column="1" x:Name="tbAdressName" VerticalContentAlignment="Center"/>
-                        <Button Grid.Column="4"  Margin="5 0 5 0" Name="AddButton" Content="Добавить" Command="{Binding AddAdressCommand}" CommandParameter="{Binding ElementName=tbAdressName,Path=Text }"/>
+                        <Button Grid.Column="4"  Margin="5 0 5 0" Name="AddButton" Content="Добавить" Command="{Binding AddAdressComand}" CommandParameter="{Binding ElementName=tbAdressName,Path=Text }"/>
                     </Grid>
                     <DataGrid x:Name="dgGrid" ItemsSource="{Binding Adresses}" Grid.Row="1" Margin="5" AutoGenerateColumns="False" IsReadOnly="True">
                         <DataGrid.Columns>
